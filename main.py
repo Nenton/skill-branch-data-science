@@ -57,17 +57,10 @@ def gradient_optimization_multi_dim(function = func_2, start_poses = [4, 10], ep
         
         for index, _ in enumerate(gradient_local):
             values[index] -= gradient_local[index] * epsilon
+            values[index] = round(values[index], 2)
         
         i += 1
-        
-    for index, _ in enumerate(values):
-        values[index] = round(values[index], 2)
     
     return values
 
 print(gradient_optimization_multi_dim())
-
-
-
-
-
