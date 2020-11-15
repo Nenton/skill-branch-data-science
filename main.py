@@ -19,9 +19,9 @@ def derivation(x: float, function = func_1):
     
     start = function(x)
     end = function(x + delta)
-    return (end - start) / delta
+    return round((end - start) / delta, 2)
 
-derivation(10)
+print(derivation(10))
 
 def gradient(queue, function = func_2):
     
@@ -33,10 +33,10 @@ def gradient(queue, function = func_2):
         new_queue = copy.deepcopy(queue)
         new_queue[index] += delta
         
-        val = round((function(new_queue) - function(queue)) / delta, 2)
+        val = round(function(new_queue), 2)
 
         values.append(val)
     
     return values
 
-gradient([10,1])
+print(gradient([10,1]))
