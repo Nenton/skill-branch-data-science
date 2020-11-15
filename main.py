@@ -1,6 +1,4 @@
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 import math
 import copy
 
@@ -24,13 +22,6 @@ def derivation(x: float, function = func_1):
     return (end - start) / delta
 
 derivation(10)
-
-def derivation_many(queue, function):
-    delta = 1e-5
-    
-    start = function(queue)
-    end = function(x + delta)
-    return (end - start) / delta
 
 def gradient(queue, function = func_2):
     
